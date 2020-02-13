@@ -1,15 +1,39 @@
+const fs = require("fs");
+
 const getHomePage = (req, res) => {
-  res.render('home', { title: 'LIKE | HOME',id:1 });
+  res.render("home", { title: "LIKE | HOME", id: 1 });
 };
 
 const getLandingPage = (req, res) => {
-  res.render("landing", {
-    title: "Welcome To LIKE"
+  fs.writeFile("./userId.json", {}, err => {
+    if (err) {
+      res.render("error", {
+        title: "LIKE | Error",
+        status: "500",
+        message:
+          "There is an error in server creating file contact the owner now."
+      });
+    } else {
+      res.render("landing", {
+        title: "Welcome To LIKE"
+      });
+    }
   });
 };
 
 const getLoginPage = (req, res) => {
-  res.render('login', { title: 'LIKE | LogIn'});
+  fs.writeFile("./userId.json", {}, err => {
+    if (err) {
+      res.render("error", {
+        title: "LIKE | Error",
+        status: "500",
+        message:
+          "There is an error in server creating file contact the owner now."
+      });
+    } else {
+      res.render("login", { title: "LIKE | LogIn" });
+    }
+  });
 };
 
 module.exports = { getHomePage, getLandingPage, getLoginPage };
