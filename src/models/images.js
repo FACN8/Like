@@ -1,6 +1,6 @@
-const dbConnection = require('../database/db_connection');
+const dbConnection = require("../database/db_connection");
 const getAllImages = cb => {
-  dbConnection.query('SELECT * FROM images', (err, res) => {
+  dbConnection.query("SELECT * FROM images", (err, res) => {
     if (err) return cb(err);
     cb(null, res.rows);
   });
@@ -8,7 +8,7 @@ const getAllImages = cb => {
 
 const getCategoryImages = (category, cb) => {
   dbConnection.query(
-    'SELECT * FROM images WHERE img_category = ($1)',
+    "SELECT * FROM images WHERE img_category = ($1)",
     [category],
     (err, res) => {
       if (err) return cb(err);
