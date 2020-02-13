@@ -1,16 +1,15 @@
 const getHomePage = (req, res) => {
-  res.render('home', { title: 'LIKE | HOME',  });
+  res.render('home', { title: 'LIKE | HOME',id:1 });
 };
 
 const getLandingPage = (req, res) => {
   res.render("landing", {
-    title: "Welcome To LIKE",
-    data: "Hello Landing Page"
+    title: "Welcome To LIKE"
   });
 };
 
 const getLoginPage = (req, res) => {
-  res.render('login', { title: 'LIKE | LogIn', data: 'Hello Login' });
+  res.render('login', { title: 'LIKE | LogIn'});
 };
 
 module.exports = { getHomePage, getLandingPage, getLoginPage };

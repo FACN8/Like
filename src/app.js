@@ -8,7 +8,6 @@ const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers/index.js');
-const helpers = require('./views/helpers/index');
 const app = express();
 
 app.use(helmet()); // protect the f**king server
@@ -35,8 +34,7 @@ app.engine(
     extname: 'hbs',
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
-    defaultLayout: 'main',
-    helpers
+    defaultLayout: 'main'
   })
 );
 
