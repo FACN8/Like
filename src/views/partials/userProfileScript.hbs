@@ -1,0 +1,14 @@
+<script>
+    let user = {{id}}
+if (!user) {
+  window.location.pathname = '/login'
+} else {
+  if (location.pathname === '/login') {
+    window.history.pushState("", "", '/profile');
+  }
+}
+let ul= document.getElementById('images-list').children
+for(let i=0;i<ul.length;i++){
+ ul[i].querySelector('#like-btn').classList.value = 'like__btn--selected';
+}
+</script>

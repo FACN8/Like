@@ -1,0 +1,23 @@
+<script>
+    let user = {{id}}
+if (!user) {
+  window.location.pathname = '/login'
+} else {
+  if (location.pathname === '/login') {
+    window.history.pushState("", "", '/home');
+  }
+}
+document.getElementById('images-list').addEventListener('click', e => {
+if (e.target.matches('#like-btn')) {
+  e.target.classList.toggle('like__btn--selected');
+  axios.post('/liked', {
+  imgId: e.target.classList[0],
+  userId: user
+})
+.catch(function (error) {
+  console.log(error);
+});
+}
+});
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>

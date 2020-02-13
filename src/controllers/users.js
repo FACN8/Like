@@ -2,11 +2,10 @@ const dataModel = require('../models');
 
 const getUserProfilePage = (req, res) => {
   dataModel.users.getUserById(1, (err, userData) => {
-    if (err) console.log(err);
+    if (err) {res.render('error', { title: 'LIKE | Error', status:'404' ,message:'There is an error in handling user ID not found.'});}
     dataModel.liked_pic.getLiked(1, (err, data) => {
-      if (err) console.log(err);
-  
-    res.render('userProfile', { title: 'LIKE | Users', userData ,data});
+      if (err){res.render('error', { title: 'LIKE | Error', status:'404' ,message:'There is an error in handling user ID data.'});}
+    res.render('userProfile', { title: 'LIKE | Users', userData ,data,id:1});
   });
   });
 };
