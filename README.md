@@ -40,18 +40,12 @@ open the local index.html file
 7. Built frontend with API's to the backend.
 8. Styling as mobile first.
 
-# Like
-
- ## HomePage 
  
  
  
  
  
-if click Read more :
-
-
-if click Log in :
+ 
 
 
 
