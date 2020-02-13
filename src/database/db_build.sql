@@ -54,8 +54,8 @@ CREATE TABLE IF NOT EXISTS users (
 INSERT INTO users(user_name,user_pass,user_img, user_status) 
 VALUES
 ('francis','123Francis','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg','Travel to life is like css to html'),
-('fatmeeh','123Fatmeeh','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg','HTTP 404: Status not Found'),
-('mahmod','123Mahmod','https://i.ytimg.com/vi/JlxU9mAPnMg/hqdefault.jpg','Do not be afraid to step on people. Mario made a career from it');
+('fatmeeh','123Fatmeeh','https://cdn.pixabay.com/photo/2018/01/04/19/23/nature-3061436_960_720.jpg','HTTP 404: Status not Found'),
+('mahmod','123Mahmod','https://image.shutterstock.com/image-photo/portrait-spanish-running-horse-black-260nw-760999816.jpg','Do not be afraid to step on people. Mario made a career from it');
 
 CREATE TABLE IF NOT EXISTS liked_pic (
     like_id SERIAL PRIMARY KEY,
