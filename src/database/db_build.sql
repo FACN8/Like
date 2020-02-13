@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS images,users;
+DROP TABLE IF EXISTS images,users CASCADE;
 
 CREATE TABLE IF NOT EXISTS images (
     img_id SERIAL PRIMARY KEY,
